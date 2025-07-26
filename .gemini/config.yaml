@@ -1,0 +1,17 @@
+have_fun: false
+
+language: ko
+
+code_review:
+  disable: false
+  comment_severity_threshold: MEDIUM
+  max_review_comments: -1
+  pull_request_opened:
+    summary: true
+    code_review: true
+
+ignore_patterns:
+  - "**/*.test.ts"
+  - "**/*.stories.tsx"
+  - "src/mocks/**"
+  - "**/__generated__/**"
