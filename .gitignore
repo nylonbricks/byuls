@@ -35,6 +35,11 @@ yarn-error.log*
 .idea
 .idea/**
 .vscode
+.vscode/**
+
+# AI-agent Rules
+*.rules
+.cursorrules
 
 # Windows and MacOS File System
 Thumbs.db
