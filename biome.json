@@ -1,9 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
-
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.json"],
+    "includes": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.json", "**/*.md"],
     "experimentalScannerIgnores": [
       "node_modules/**",
       "dist/**",
@@ -12,13 +11,11 @@
       "pnpm-lock.yaml"
     ]
   },
-
   "vcs": {
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
   },
-
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -26,23 +23,19 @@
     "lineWidth": 100,
     "lineEnding": "lf"
   },
-
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
-
       "correctness": {
         "noUndeclaredVariables": "error",
         "noUnusedVariables": "error",
         "useExhaustiveDependencies": "warn"
       },
-
       "suspicious": {
         "noArrayIndexKey": "info",
         "noExplicitAny": "info"
       },
-
       "style": {
         "noInferrableTypes": "error",
         "noNonNullAssertion": "warn",
@@ -63,29 +56,24 @@
         "useSingleVarDeclarator": "error",
         "useTemplate": "error"
       },
-
       "complexity": {
         "noBannedTypes": "off",
         "noForEach": "off",
         "noUselessFragments": "warn",
         "useLiteralKeys": "off"
       },
-
       "a11y": {
         "noLabelWithoutControl": "off",
         "useKeyWithClickEvents": "off"
       },
-
       "security": {
         "noDangerouslySetInnerHtml": "warn"
       },
-
       "nursery": {
         "useSortedClasses": "error"
       }
     }
   },
-
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
@@ -94,7 +82,6 @@
       "arrowParentheses": "asNeeded"
     }
   },
-
   "assist": {
     "actions": {
       "source": {
@@ -102,7 +89,6 @@
       }
     }
   },
-
   "overrides": [
     {
       "includes": ["**/*.ts", "**/*.tsx"],
