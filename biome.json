@@ -1,13 +1,15 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
+  
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.json"],
+    "includes": [
+      "**/*.ts",
+      "**/*.tsx", 
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.json"
+    ],
     "experimentalScannerIgnores": [
       "node_modules/**",
       "dist/**",
@@ -16,6 +18,13 @@
       "pnpm-lock.yaml"
     ]
   },
+  
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -23,35 +32,66 @@
     "lineWidth": 100,
     "lineEnding": "lf"
   },
+  
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
+      
       "correctness": {
-        "noUnusedVariables": "warn",
-        "noUndeclaredVariables": "error"
+        "noUndeclaredVariables": "error",
+        "noUnusedVariables": "error",
+        "useExhaustiveDependencies": "warn"
       },
+      
       "suspicious": {
-        "noExplicitAny": "warn",
-        "noArrayIndexKey": "warn"
+        "noArrayIndexKey": "info",
+        "noExplicitAny": "info"
       },
+      
       "style": {
-        "useConst": "error",
-        "useImportType": "error",
-        "useTemplate": "error",
+        "noInferrableTypes": "error",
+        "noNonNullAssertion": "warn",
+        "noParameterAssign": "error",
+        "noUnusedTemplateLiteral": "warn",
+        "noUselessElse": "error",
+        "useArrayLiterals": "error",
+        "useAsConstAssertion": "error",
         "useBlockStatements": "error",
+        "useConst": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useImportType": "error",
+        "useNodejsImportProtocol": "off",
+        "useNumberNamespace": "error",
+        "useSelfClosingElements": "error",
         "useShorthandAssign": "error",
-        "useArrayLiterals": "error"
+        "useSingleVarDeclarator": "error",
+        "useTemplate": "error"
       },
+      
       "complexity": {
+        "noBannedTypes": "off",
         "noForEach": "off",
-        "noUselessFragments": "warn"
+        "noUselessFragments": "warn",
+        "useLiteralKeys": "off"
       },
+      
+      "a11y": {
+        "noLabelWithoutControl": "off",
+        "useKeyWithClickEvents": "off"
+      },
+      
+      "security": {
+        "noDangerouslySetInnerHtml": "warn"
+      },
+      
       "nursery": {
         "useSortedClasses": "error"
       }
     }
   },
+  
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
@@ -60,6 +100,7 @@
       "arrowParentheses": "asNeeded"
     }
   },
+  
   "assist": {
     "actions": {
       "source": {
@@ -67,19 +108,26 @@
       }
     }
   },
+  
   "overrides": [
     {
-      "includes": ["**/*.ts", "**/*.tsx"],
+      "includes": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
       "linter": {
         "rules": {
           "style": {
+            "noNonNullAssertion": "off",
             "useImportType": "error"
           }
         }
       }
     },
     {
-      "includes": ["**/*.tsx"],
+      "includes": [
+        "**/*.tsx"
+      ],
       "linter": {
         "rules": {
           "correctness": {
