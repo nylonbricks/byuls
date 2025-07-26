@@ -1,5 +1,7 @@
+import { Fragment } from 'react';
+
 const Page = () => {
-  return <div>Hello World</div>;
+  return <Fragment>Page</Fragment>;
 };
 
 export default Page;

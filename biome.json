@@ -7,7 +7,13 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.json"],
+    "includes": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.json"
+    ],
     "experimentalScannerIgnores": [
       "node_modules/**",
       "dist/**",
@@ -28,16 +34,27 @@
     "rules": {
       "recommended": true,
       "correctness": {
-        "noUnusedVariables": "warn"
+        "noUnusedVariables": "warn",
+        "noUndeclaredVariables": "error"
       },
       "suspicious": {
-        "noExplicitAny": "warn"
+        "noExplicitAny": "warn",
+        "noArrayIndexKey": "warn"
       },
       "style": {
-        "useConst": "error"
+        "useConst": "error",
+        "useImportType": "error",
+        "useTemplate": "error",
+        "useBlockStatements": "error",
+        "useShorthandAssign": "error",
+        "useArrayLiterals": "error"
       },
       "complexity": {
-        "noForEach": "off"
+        "noForEach": "off",
+        "noUselessFragments": "warn"
+      },
+      "nursery": {
+        "useSortedClasses": "error"
       }
     }
   },
@@ -48,5 +65,42 @@
       "semicolons": "always",
       "arrowParentheses": "asNeeded"
     }
-  }
-} 
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "useImportType": "error"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "**/*.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredVariables": "error"
+          },
+          "suspicious": {
+            "noArrayIndexKey": "error"
+          }
+        }
+      }
+    }
+  ]
+}
