@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import type { PropsWithChildren, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { Layout } from '~/components/layout';
 import { site } from '~/constants';
 import { Pretendard } from './_fonts';
