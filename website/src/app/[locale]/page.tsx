@@ -28,7 +28,7 @@ const Page = async () => {
 
         <div>
           <h2 className="font-medium text-base text-neutral-900">Installation</h2>
-          <p className="mt-1 text-base text-neutral-500 leading-relaxed">Hello</p>
+          <p className="mt-1 text-base text-neutral-500 leading-relaxed">TODO</p>
         </div>
       </Card>
     </div>
