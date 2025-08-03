@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { Background } from './_components/background';
 import { ByulsAudio } from './_components/byuls-audio';
 import { Card } from './_components/card';
 import { Hero } from './_components/hero';
@@ -9,6 +10,10 @@ const Page = async () => {
 
   return (
     <div className="mx-auto flex w-full max-w-[764px] flex-col px-4 py-16">
+      <div className="fixed top-0 left-0 h-full w-full blur-[10px]" aria-hidden="true">
+        <Background />
+      </div>
+
       <Hero />
 
       <Card>
