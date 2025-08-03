@@ -1,12 +1,14 @@
 'use client';
 
-import { Fragment } from 'react';
+import { Fragment, useRef } from 'react';
 
 export const ByulsAudio = () => {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
   return (
     <Fragment>
       {/* biome-ignore lint/a11y/useMediaCaption: not needed as the audio is only a pronunciation guide. */}
-      <audio id="byuls-audio" className="hidden">
+      <audio ref={audioRef} className="hidden">
         <source src="/byuls-audio.mp3" type="audio/mpeg" />
       </audio>
 
@@ -15,9 +17,8 @@ export const ByulsAudio = () => {
         className="mb-0.5 cursor-pointer px-0.5 align-middle"
         aria-label="Play audio"
         onClick={async () => {
-          const audio = document.getElementById('byuls-audio') as HTMLAudioElement;
-          if (audio) {
-            await audio.play();
+          if (audioRef.current) {
+            await audioRef.current.play();
           }
         }}
       >
