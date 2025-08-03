@@ -6,7 +6,7 @@ export async function GET() {
     const discussions = await getDiscussions();
     return NextResponse.json({ discussions });
   } catch (error) {
-    console.error('[byuls] `/api/auth/discussion`', error);
+    console.error('[byuls] `/api/discussion`', error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
