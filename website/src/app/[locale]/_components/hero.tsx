@@ -20,7 +20,7 @@ export const Hero = () => {
         {site.title}
       </motion.h1>
       <motion.p
-        className="mt-3 font-medium text-[rgba(19,21,23,0.56)] text-lg"
+        className="mt-4 font-medium text-[rgba(19,21,23,0.56)] text-lg"
         initial={{ opacity: 0, filter: 'blur(8px)', transform: 'translateY(6px)' }}
         animate={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(0px)' }}
         transition={{
