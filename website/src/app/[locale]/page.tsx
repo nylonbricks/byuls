@@ -6,7 +6,6 @@ import { Hero } from './_components/hero';
 
 const Page = async () => {
   const t = await getTranslations('HomePage');
-  const today = t('today').split('[byuls.audio]');
 
   return (
     <div className="mx-auto flex w-full max-w-[764px] flex-col px-4 pt-20 pb-4">
@@ -18,9 +17,7 @@ const Page = async () => {
         <div>
           <h2 className="font-medium text-base text-neutral-900">Today</h2>
           <p className="mt-2 whitespace-pre-wrap text-base text-neutral-500 leading-relaxed">
-            {today[0]}
-            <ByulsAudio />
-            {today[1]}
+            {t.rich('today', { audio: () => <ByulsAudio /> })}
           </p>
         </div>
 
