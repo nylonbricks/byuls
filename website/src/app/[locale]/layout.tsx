@@ -41,7 +41,7 @@ const RootLayout = async ({ children, params }: Props) => {
   }
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={Pretendard.className}>
         <div
           className="translate-z-0 pointer-events-none fixed top-0 left-0 z-overlay h-16 w-full select-none opacity-95 backdrop-blur-[6px] [mask-image:linear-gradient(to_bottom,var(--color-black)_25%,transparent)] md:h-24"
