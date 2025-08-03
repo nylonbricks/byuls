@@ -9,7 +9,7 @@ const Page = async () => {
   const today = t('today').split('[byuls.audio]');
 
   return (
-    <div className="mx-auto flex w-full max-w-[764px] flex-col px-4 py-16">
+    <div className="mx-auto flex w-full max-w-[764px] flex-col px-4 pt-20 pb-4">
       <div className="fixed top-0 left-0 h-full w-full blur-[10px]" aria-hidden="true">
         <Background />
       </div>
