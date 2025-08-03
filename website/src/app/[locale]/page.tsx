@@ -16,14 +16,14 @@ const Page = async () => {
       <Card>
         <div>
           <h2 className="font-medium text-base text-neutral-900">Today</h2>
-          <p className="mt-2 whitespace-pre-wrap text-base text-neutral-500 leading-relaxed">
+          <p className="mt-2 whitespace-pre-wrap text-base text-neutral-600/80 leading-relaxed">
             {t.rich('today', { audio: () => <ByulsAudio /> })}
           </p>
         </div>
 
         <div>
           <h2 className="font-medium text-base text-neutral-900">Installation</h2>
-          <p className="mt-1 text-base text-neutral-500 leading-relaxed">TODO</p>
+          <p className="mt-1 text-base text-neutral-600/80 leading-relaxed">TODO</p>
         </div>
       </Card>
     </div>

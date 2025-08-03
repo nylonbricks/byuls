@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <div className="fixed">
       <motion.h1
-        className="font-bold text-5xl tracking-[-0.3px] md:text-6xl"
+        className="font-bold text-5xl text-neutral-900/75 tracking-[-0.3px] md:text-6xl"
         initial={{ opacity: 0, filter: 'blur(8px)', transform: 'translateY(6px)' }}
         animate={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(0px)' }}
         transition={{
@@ -20,7 +20,7 @@ export const Hero = () => {
         {site.title}
       </motion.h1>
       <motion.p
-        className="mt-4 font-medium text-[rgba(19,21,23,0.56)] text-lg"
+        className="mt-4 font-medium text-lg text-neutral-500/75"
         initial={{ opacity: 0, filter: 'blur(8px)', transform: 'translateY(6px)' }}
         animate={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(0px)' }}
         transition={{
