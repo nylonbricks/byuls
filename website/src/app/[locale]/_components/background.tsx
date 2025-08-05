@@ -20,7 +20,7 @@ export const Background = () => {
           </filter>
         </defs>
 
-        <ellipse cx="400" cy="300" rx="450" ry="300" fill="url(#grad)" opacity="0.2" />
+        <ellipse cx="400" cy="300" rx="450" ry="300" fill="url(#grad)" opacity="0.1" />
       </svg>
     </div>
   );
