@@ -1,11 +1,14 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { easeInOut, motion, useScroll, useTransform } from 'motion/react';
 import { site } from '~/constants';
 
 export const Hero = () => {
+  const { scrollY } = useScroll();
+  const backgroundScale = useTransform(scrollY, [0, 200], [1, 0.95], { ease: easeInOut });
+
   return (
-    <div className="fixed">
+    <motion.div className="fixed" style={{ scale: backgroundScale }}>
       <motion.h1
         className="font-bold text-5xl text-neutral-900/80 tracking-[-0.3px] md:text-6xl"
         initial={{ opacity: 0, filter: 'blur(8px)', transform: 'translateY(6px)' }}
@@ -32,6 +35,6 @@ export const Hero = () => {
       >
         {site.description}
       </motion.p>
-    </div>
+    </motion.div>
   );
 };
