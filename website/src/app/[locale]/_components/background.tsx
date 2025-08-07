@@ -15,11 +15,7 @@ export const Background = () => {
             <stop offset="75%" stopColor="#d8f2ff" />
             <stop offset="100%" stopColor="#c5f7e8" />
           </radialGradient>
-          <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="80" />
-          </filter>
         </defs>
-
         <ellipse cx="50" cy="90" rx="100" ry="100" fill="url(#grad)" opacity="0.1" />
       </svg>
     </div>
