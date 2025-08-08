@@ -14,7 +14,7 @@
   "dependencies": {
     "@octokit/graphql": "^9.0.1",
     "motion": "^12.23.12",
-    "next": "^15.4.5",
+    "next": "^15.4.6",
     "next-intl": "^4.3.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
