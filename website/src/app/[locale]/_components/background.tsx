@@ -1,8 +1,8 @@
 export const Background = () => {
   return (
-    <div className="fixed top-0 left-0 h-full w-full blur-[10px]">
+    <div className="fixed top-0 left-0 h-full w-full">
       <svg
-        viewBox="0 0 800 600"
+        viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid slice"
         aria-hidden="true"
@@ -15,12 +15,8 @@ export const Background = () => {
             <stop offset="75%" stopColor="#d8f2ff" />
             <stop offset="100%" stopColor="#c5f7e8" />
           </radialGradient>
-          <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="80" />
-          </filter>
         </defs>
-
-        <ellipse cx="400" cy="300" rx="450" ry="300" fill="url(#grad)" opacity="0.1" />
+        <ellipse cx="50" cy="90" rx="100" ry="100" fill="url(#grad)" opacity="0.1" />
       </svg>
     </div>
   );
