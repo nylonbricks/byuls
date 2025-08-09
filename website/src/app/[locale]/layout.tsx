@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { Layout } from '~/components/layout';
 import { site } from '~/constants';
-import { Pretendard } from './_fonts';
 import '~/styles/globals.css';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
@@ -42,13 +40,7 @@ const RootLayout = async ({ children, params }: Props) => {
 
   return (
     <html lang={locale}>
-      <body className={Pretendard.className}>
-        <div
-          className="translate-z-0 pointer-events-none fixed top-0 left-0 z-overlay h-16 w-full select-none opacity-95 backdrop-blur-[6px] [mask-image:linear-gradient(to_bottom,var(--color-black)_25%,transparent)] md:h-24"
-          aria-hidden={true}
-        />
-        <Layout>{children}</Layout>
-      </body>
+      <body>{children}</body>
     </html>
   );
 };
