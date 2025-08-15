@@ -2,9 +2,14 @@ import { graphql } from '@octokit/graphql';
 import { env } from '~/constants/variable';
 import type { Discussion } from './type';
 
-export async function getDiscussions(): Promise<Discussion[]> {
-  const repoId = process.env.GITHUB_REPO_ID!;
-  const categoryId = process.env.GITHUB_CATEGORY_ID!;
+/**
+ * Fetch discussions from a GitHub repository.
+ *
+ * @param repoId - The ID of the repository.
+ * @param categoryId - The ID of the discussion category.
+ * @returns A promise that resolves to an array of discussions.
+ */
+export async function getDiscussions(repoId: string, categoryId: string): Promise<Discussion[]> {
   const token = env.token!;
 
   const result = await graphql<{
