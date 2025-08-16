@@ -1,4 +1,8 @@
+import { useId } from 'react';
+
 export const Background = () => {
+  const id = useId();
+
   return (
     <div className="fixed top-0 left-0 h-full w-full">
       <svg
@@ -8,7 +12,7 @@ export const Background = () => {
         aria-hidden="true"
       >
         <defs>
-          <radialGradient id="grad" cx="50%" cy="50%" r="80%">
+          <radialGradient id={id} cx="50%" cy="50%" r="80%">
             <stop offset="0%" stopColor="#ffe0e0" />
             <stop offset="25%" stopColor="#ffd9f4" />
             <stop offset="50%" stopColor="#f7f1ff" />
@@ -16,7 +20,7 @@ export const Background = () => {
             <stop offset="100%" stopColor="#c5f7e8" />
           </radialGradient>
         </defs>
-        <ellipse cx="50" cy="90" rx="100" ry="100" fill="url(#grad)" opacity="0.1" />
+        <ellipse cx="50" cy="90" rx="100" ry="100" fill={`url(#${id})`} opacity="0.1" />
       </svg>
     </div>
   );

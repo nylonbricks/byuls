@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { twMerge } from 'tailwind-merge';
 import { getDiscussions } from '~/api/discussions';
 
 type Props = {

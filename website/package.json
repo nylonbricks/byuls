@@ -8,6 +8,7 @@
     "build:client": "tsc client.ts --outDir public",
     "start": "next start",
     "lint": "biome lint .",
+    "lint:fix": "biome lint . --fix",
     "format": "biome format --write .",
     "check": "biome check ."
   },

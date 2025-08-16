@@ -25,13 +25,30 @@
     src,
   };
 
-  Object.entries(iframeAttributes).forEach(
-    ([key, value]) => value && iframeElement.setAttribute(key, value),
-  );
+  Object.entries(iframeAttributes).forEach(([key, value]) => {
+    if (value) {
+      iframeElement.setAttribute(key, value);
+    }
+  });
 
   const iframeContainer = document.createElement('div');
   iframeContainer.setAttribute('class', 'byuls');
   iframeContainer.appendChild(iframeElement);
 
   script.insertAdjacentElement('afterend', iframeContainer);
+
+  window.addEventListener('message', event => {
+    if (event.origin !== origin) {
+      return;
+    }
+
+    const { data } = event;
+    if (!(typeof data === 'object' && data.giscus)) {
+      return;
+    }
+
+    if (data.giscus.resizeHeight) {
+      iframeElement.style.height = `${data.giscus.resizeHeight}px`;
+    }
+  });
 })();
